@@ -14,13 +14,16 @@ class Character():
         self.hit_points = self._calculate_hit_points(2, 8)
 
     def display(self):
+        print(f"Name: {self.name}")
+        print(f"District: {self.district}")
+        print(f"Special Ability: {self.special_ability}")
         print(f"Your strength is {self.strength}")
         print(f"Your intelligence is {self.intelligence}")
         print(f"Your wisdom is {self.wisdom}")
-        print(f"Your strength is {self.strength}")
-        print(f"Your strength is {self.strength}")
-        print(f"Your strength is {self.strength}")
-        print(f"Your strength is {self.strength}")
+        print(f"Your dexterity is {self.dexterity}")
+        print(f"Your constitution is {self.constitution}")
+        print(f"Your charisma is {self.charisma}")
+        print(f"You have {self.hit_points} hit points")
 
     def _roll_die(self, sides = 20):                
         roll = random.choice(range(1, sides + 1))

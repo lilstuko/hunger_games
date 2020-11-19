@@ -1,4 +1,6 @@
 import random
+import os
+
 from greeter import Greeter
 from character import Character
 
@@ -19,16 +21,21 @@ if __name__ == '__main__':
 
             name = input("What do you want your name to be? ").title()
 
+            special_abilities = ["recognizing and memorizing plants", "camouflage", "snares"]
+
             while True:
                 try:
-                    special_ability = int(input("Are you good at: (Choose 1) \n1)reconizing and memorizing plants \n2)camoflauge \n3)snares\n"))
+                    special_ability = int(input("Are you good at: (Choose 1) \n1)recognizing and memorizing plants \n2)camouflage \n3)snares\n"))
                     if special_ability >= 1 and special_ability <= 3:
                         break
                 except ValueError:
                     print("Sorry! Please type the number of the option you wish to select!")
 
-            player_character = Character(name, district, special_ability)
+            player_character = Character(name, district, special_abilities[special_ability - 1])
+            os.system('clear')
             player_character.display()
+            input("\nPress Enter to continue... ")
+            os.system('clear')
         
         else:    
             pass
