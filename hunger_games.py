@@ -59,10 +59,25 @@ if __name__ == '__main__':
                 possible_names = district_names[district - 1]
                 name = random.choice(possible_names)
 
-                special_ability = random.choice(range(1, 4))
-                special_abilities = ["recognizing and memorizing plants", "camouflage", "snares"]
+                special_abilities = [
+                    ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
+                    ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
+                    ["Engineering", "Stuff", "things"],
+                    ["Fishing", "Swimming", "Using tridents and knives"],
+                    ["stuff", "smarts", "things"],
+                    ["hello", "bob", "Camoflauge"],
+                    ["reconigzing and memorizing plants", "Axe-wielding", "Climbing"],
+                    ["Sewing", "Knitting", "Weaving"],
+                    ["Using scythes", "Grain stuff", "eating bread"],
+                    ["Killing animals", "Raising Animals", "Eating animals"],
+                    ["Climbing", "Picking food", "recognizing and memorizing plants"],
+                    ["Making fires", "Coal stuff", "usually pretty weak"],
+                ]                   
 
-                player_character = Character(name, district, special_abilities[special_ability - 1])
+                possible_sa = special_abilities[district - 1]
+                special_ability = random.choice(possible_sa)
+
+                player_character = Character(name, district, special_ability)
                 os.system('clear')
                 player_character.display()
                 new_character = input("\nIf you would like to generate a new character, press 'n' then hit Enter. Otherwise, press Enter. ")
