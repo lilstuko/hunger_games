@@ -1,6 +1,21 @@
 import random 
 
 class Character():
+    special_abilities = [
+        ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
+        ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
+        ["Engineering", "Stuff", "things"],
+        ["Fishing", "Swimming", "Using tridents and knives"],
+        ["stuff", "smarts", "things"],
+        ["hello", "bob", "Camoflauge"],
+        ["recognizing and memorizing plants", "Axe-wielding", "Climbing"],
+        ["Sewing", "Knitting", "Weaving"],
+        ["Using scythes", "Grain stuff", "eating bread"],
+        ["Killing animals", "Raising Animals", "Eating animals"],
+        ["Climbing", "Picking food", "recognizing and memorizing plants"],
+        ["Making fires", "Coal stuff", "usually pretty weak"],
+    ]                   
+
     def __init__(self, name, district, special_ability):
         self.name = name
         self.district = district

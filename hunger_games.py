@@ -21,36 +21,33 @@ if __name__ == '__main__':
 
             name = input("What do you want your name to be? ").title()
 
-            special_abilities = ["recognizing and memorizing plants", "camouflage", "snares"]
+            possible_sa = Character.special_abilities[district - 1]
 
             while True:
                 try:
-                    special_ability = int(input("Are you good at: (Choose 1) \n1)recognizing and memorizing plants \n2)camouflage \n3)snares\n"))
+                    for index, ability in enumerate(possible_sa):
+                        print(f"{index + 1}) {ability}")
+                    special_ability = int(input(f"Are you good at: (Choose 1) \n"))
                     if special_ability >= 1 and special_ability <= 3:
+                        special_ability = possible_sa[special_ability - 1]
                         break
                 except ValueError:
                     print("Sorry! Please type the number of the option you wish to select!")
-
-            player_character = Character(name, district, special_abilities[special_ability - 1])
-            os.system('clear')
-            player_character.display()
-            input("Press Enter to continue: ")  
-            os.system('clear')      
 
         else:
             reroll = True
             while reroll == True:
                 district = random.choice(range(1, 13))
                 district_names = [
-                    ["Glimmer", "Cashmere", "Gloss"],
-                    ["Brutus", "Cato", "Clove"],
-                    ["Beetee", "Wiress", "Circ"], 
-                    ["Finnick", "Annie", "Mags"],
-                    ["Finch", "Foxface", "Hy"],
-                    ["Otto", "Ginnee", "Titus"],
-                    ["Treech", "Lamina", "Johanna"],
-                    ["Bobbin", "Wovey", "Cecelia"], 
-                    ["Panlo", "Sheaf", "Fonio"],
+                    ["Emerald", "Velvet", "Shine"],
+                    ["Glaucia", "Vesta", "Leonine"],
+                    ["Pixel", "Link", "Zinn"], 
+                    ["Ocean", "Tethys", "Luna"],
+                    ["Shaya", "Halo", "Everly"],
+                    ["Linx", "Wren", "Atlas"],
+                    ["Aspen", "Ash", "Arden"],
+                    ["Penelope", "Weaver", "Dior"], 
+                    ["Barric", "Senwe", "Fonio"],
                     ["Brandy", "Tanner", "Dalton"],
                     ["Rue", "Thresh", "Chaff"],
                     ["Katniss", "Peeta", "Lucy Gray"],
@@ -59,28 +56,17 @@ if __name__ == '__main__':
                 possible_names = district_names[district - 1]
                 name = random.choice(possible_names)
 
-                special_abilities = [
-                    ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
-                    ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
-                    ["Engineering", "Stuff", "things"],
-                    ["Fishing", "Swimming", "Using tridents and knives"],
-                    ["stuff", "smarts", "things"],
-                    ["hello", "bob", "Camoflauge"],
-                    ["reconigzing and memorizing plants", "Axe-wielding", "Climbing"],
-                    ["Sewing", "Knitting", "Weaving"],
-                    ["Using scythes", "Grain stuff", "eating bread"],
-                    ["Killing animals", "Raising Animals", "Eating animals"],
-                    ["Climbing", "Picking food", "recognizing and memorizing plants"],
-                    ["Making fires", "Coal stuff", "usually pretty weak"],
-                ]                   
-
-                possible_sa = special_abilities[district - 1]
+                possible_sa = Character.special_abilities[district - 1]
                 special_ability = random.choice(possible_sa)
 
-                player_character = Character(name, district, special_ability)
                 os.system('clear')
-                player_character.display()
+                print(f"Name: {name}\nDistrict: {district}\nSpecial Ability: {special_ability}")
                 new_character = input("\nIf you would like to generate a new character, press 'n' then hit Enter. Otherwise, press Enter. ")
                 if new_character != 'n':
                     reroll = False
-                os.system('clear')              
+
+        player_character = Character(name, district, special_ability)
+        os.system('clear')
+        player_character.display()
+        input("Press Enter to continue: ")
+        os.system('clear')              
