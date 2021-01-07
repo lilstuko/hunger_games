@@ -1,19 +1,34 @@
 import random 
 
 class Character():
+    district_names = [
+        ["Emerald", "Velvet", "Shine"],
+        ["Glaucia", "Vesta", "Leonine"],
+        ["Pixel", "Link", "Zinn"], 
+        ["Ocean", "Tethys", "Luna"],
+        ["Shaya", "Halo", "Everly"],
+        ["Linx", "Wren", "Atlas"],
+        ["Aspen", "Ash", "Arden"],
+        ["Penelope", "Weaver", "Dior"], 
+        ["Barric", "Senwe", "Fonio"],
+        ["Texas", "Ames", "Bale"],
+        ["Saffron", "Cassia", "Florian"],
+        ["Blaze", "Quince", "Amber"],
+    ]
+    
     special_abilities = [
         ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
         ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
-        ["Engineering", "Stuff", "things"],
+        ["Making", "Making traps", "things"],
         ["Fishing", "Swimming", "Using tridents and knives"],
         ["stuff", "smarts", "things"],
         ["hello", "bob", "Camoflauge"],
-        ["recognizing and memorizing plants", "Axe-wielding", "Climbing"],
+        ["Recognizing and memorizing plants", "Axe-wielding", "Climbing"],
         ["Sewing", "Knitting", "Weaving"],
         ["Using scythes", "Grain stuff", "eating bread"],
-        ["Killing animals", "Raising Animals", "Eating animals"],
-        ["Climbing", "Picking food", "recognizing and memorizing plants"],
-        ["Making fires", "Coal stuff", "usually pretty weak"],
+        ["Animals", "Raising Animals", "Eating animals"],
+        ["Climbing trees", "Picking food", "recognizing and memorizing plants"],
+        ["Making fires", "Recognizing and memorizing plants", "usually pretty weak"],
     ]                   
 
     def __init__(self, name, district, special_ability):
