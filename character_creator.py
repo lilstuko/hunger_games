@@ -28,6 +28,11 @@ class CharacterCreator():
             except ValueError:
                 print("Sorry! Please type the number of the option you wish to select!")
 
+#            if district in [1, 2, 4]:
+ #               career = True
+ #           else:
+#                career = False
+
         return Character(name, district, special_ability)
 
     def generate_random_character(self):
@@ -45,6 +50,11 @@ class CharacterCreator():
             print(f"Name: {name}\nDistrict: {district}\nSpecial Ability: {special_ability}")
             new_character = input("\nIf you would like to generate a new character, press 'n' then hit Enter. Otherwise, press Enter. ")
             if new_character != 'n':
-                reroll = False
+                reroll = False    
         
+#        if district == 1 or district == 2 or district == 4:
+#            career = "volunteered"
+#        else:
+#            career = "were reaped"
+
         return Character(name, district, special_ability)

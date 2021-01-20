@@ -15,21 +15,38 @@ class Character():
         ["Saffron", "Cassia", "Florian"],
         ["Blaze", "Quince", "Amber"],
     ]
-    
+
     special_abilities = [
-        ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
-        ["Throwing knives", "Hand-to-Hand combat", "Using weapons effectively"],
-        ["Making", "Making traps", "things"],
+        ["Throwing knives", "Hand-to-Hand combat", "Using your chosen weapon effectively"],
+        ["Throwing knives", "Hand-to-Hand combat", "Using your chosen weapon effectively"],
+        ["Making fire", "Making traps", "Recognizing and memorizing plants"],
         ["Fishing", "Swimming", "Using tridents and knives"],
-        ["stuff", "smarts", "things"],
-        ["hello", "bob", "Camoflauge"],
-        ["Recognizing and memorizing plants", "Axe-wielding", "Climbing"],
-        ["Sewing", "Knitting", "Weaving"],
-        ["Using scythes", "Grain stuff", "eating bread"],
-        ["Animals", "Raising Animals", "Eating animals"],
-        ["Climbing trees", "Picking food", "recognizing and memorizing plants"],
-        ["Making fires", "Recognizing and memorizing plants", "usually pretty weak"],
-    ]                   
+        ["Making fire", "Camoflauge", "Climbing trees"],
+        ["Finding food", "Camoflauge", "Camoflauge"],
+        ["Recognizing and memorizing plants", "Axe-wielding", "Climbing trees"],
+        ["Making traps", "Healing with few resources", "Weaving"],
+        ["Using scythes", "Finding food", "Making fire"],
+        ["Finding food", "Using wildlife to your advantage", "Healing with few resources"],
+        ["Climbing trees", "Making fire", "Recognizing and memorizing plants"],
+        ["Making fire", "Recognizing and memorizing plants", "Healing with few resources"],
+    ]                  
+
+    chariot_costume_theme = [
+        ["Diamonds", "Gold", "Silver"],
+        ["Roman Armor", "pooop", "hello"],
+        ["party", "techy stuff", "computer"],
+        ["net", "trident", "moon"],
+        ["lightbulb", "zap zap", "ENERGY"],
+        ["trains", "tracks", "metel"],
+        ["trees", "sap", "wood"],
+        ["fabric", "sheets", "clothes"],
+        ["wheat", "grain", "bread"],
+        ["cows", "pigs", "bacon"],
+        ["food", "fruit", "other food"],
+        ["coal", "fiyaaa", "'stark naked covered with coal dust' -Katniss Everdeen"],
+    ]
+
+    costume_style = ["dress", "suit", "bodysuit"]
 
     def __init__(self, name, district, special_ability):
         self.name = name
