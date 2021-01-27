@@ -46,7 +46,7 @@ class Character():
         ["coal", "fiyaaa", "'stark naked covered with coal dust' -Katniss Everdeen"],
     ]
 
-    costume_style = ["dress", "suit", "bodysuit"]
+    costume_style = ["Dress", "Suit", "Bodysuit"]
 
     def __init__(self, name, district, special_ability):
         self.name = name

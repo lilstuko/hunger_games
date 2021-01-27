@@ -19,7 +19,7 @@
  - classify each character as career or outlying district
 
  ## Parts of the Games:
- - Reaping
+ - ~Reaping~
  - Tribute Parade
  - Training
  - Interviews

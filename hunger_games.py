@@ -4,6 +4,7 @@ import time
 from greeter import Greeter
 from character_creator import CharacterCreator
 from character import Character
+import util
 
 if __name__ == '__main__':
     os.system('clear')
@@ -82,29 +83,9 @@ if __name__ == '__main__':
         time.sleep(3)
         
         possible_costume_theme = Character.chariot_costume_theme[player_character.district - 1]
-
-        while True:
-            try:
-                for index, theme in enumerate(possible_costume_theme):
-                    print(f"{index + 1}) {theme}")
-                costume = int(input(f"Choose your costume theme: "))
-                if costume >= 1 and costume <= 3:
-                    costume = possible_costume_theme[costume - 1]
-                    break
-            except ValueError:
-                print("Sorry! Please type the number of the option you wish to select!")
+        costume = util.choose_from_menu(possible_costume_theme, "Choose your costume theme: ")
 
         possible_costume_style = Character.costume_style
-
-        while True:
-            try:
-                for index, style in enumerate(possible_costume_style):
-                    print(f"{index + 1}) {style}") 
-                costume_style = int(input(f"Do you want your chariot costume to be a: "))
-                if costume_style >= 1 and costume_style <= 3:
-                    costume_style = possible_costume_style[costume_style - 1]
-                    break
-            except ValueError:
-                print("Sorry! Please type the number of the option you wish to select!")
-
-        print(f"Your stylist dressed you up in a {costume.lower()}-themed {costume_style}")
+        costume_style = util.choose_from_menu(possible_costume_style, "Choose your costume style: ")
+        
+        print(f"Your stylist dressed you up in a {costume.lower()}-themed {costume_style.lower()}.")
