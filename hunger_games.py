@@ -65,7 +65,7 @@ if __name__ == '__main__':
 #        input(f"Does Gray advise you to...\n1)Team up with the{career}Careers\n2)Run away from the bloodbath\n3)Grab one thing and run\n")
 
         os.system('clear')
-        print("THE TRIBUTE PARADE")
+        print("THE TRIBUTE PARADE pt 1")
         time.sleep(2)
         os.system('clear')
 
@@ -89,3 +89,16 @@ if __name__ == '__main__':
         costume_style = util.choose_from_menu(possible_costume_style, "Choose your costume style: ")
         
         print(f"Your stylist dressed you up in a {costume.lower()}-themed {costume_style.lower()}.")
+
+        ### NEW SCENE ###
+        os.system('clear')
+        print("THE TRIBUTE PARADE pt 2")
+        time.sleep(2)
+        os.system('clear')
+
+        print(f"During the parade,")
+        time.sleep(3)
+        print("stuff happens")
+        time.sleep(3)
+        print("They throw flowers at you.")
+        time.sleep(3)        

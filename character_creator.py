@@ -2,6 +2,7 @@ import os
 import random
 
 from character import Character
+import util
 
 class CharacterCreator():
     def make_custom_character(self): 
@@ -16,22 +17,7 @@ class CharacterCreator():
         name = input("What do you want your name to be? ").title()
 
         possible_sa = Character.special_abilities[district - 1]
-
-        while True:
-            try:
-                for index, ability in enumerate(possible_sa):
-                    print(f"{index + 1}) {ability}")
-                special_ability = int(input(f"Are you good at: (Choose 1) \n"))
-                if special_ability >= 1 and special_ability <= 3:
-                    special_ability = possible_sa[special_ability - 1]
-                    break
-            except ValueError:
-                print("Sorry! Please type the number of the option you wish to select!")
-
-#            if district in [1, 2, 4]:
- #               career = True
- #           else:
-#                career = False
+        special_ability = util.choose_from_menu(possible_sa, "Are you good at: (Choose 1) \n")
 
         return Character(name, district, special_ability)
 
@@ -51,10 +37,5 @@ class CharacterCreator():
             new_character = input("\nIf you would like to generate a new character, press 'n' then hit Enter. Otherwise, press Enter. ")
             if new_character != 'n':
                 reroll = False    
-        
-#        if district == 1 or district == 2 or district == 4:
-#            career = "volunteered"
-#        else:
-#            career = "were reaped"
 
         return Character(name, district, special_ability)
